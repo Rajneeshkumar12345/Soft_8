@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+
+    <link rel="stylesheet" href="index.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick-theme.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+</head>
+
+<body style="background-color: rgba(70, 30, 116, 0.7);overflow-x: hidden;">
+    <!-- Navbar -->
+    <div class="main_image">
+        <nav class="navbar navbar-expand-lg">
+            <a class="navbar-brand" href="index.html"><img src="/images/logo.png" width="130" height="60"
+                    class="ms-3 Logo" alt="logo" /></a>
+            <div class="container-fluid">
+                <button class="navbar-toggler px-0" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarExampleOnHover" aria-controls="navbarExampleOnHover" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <i class="fas fa-bars text-white"></i>
+                </button>
+                <div class="collapse navbar-collapse justify-content-center Mobile_nav" id="navbarExampleOnHover">
+                    <ul class="navbar-nav me-auto ps-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html"><span class="Nav_head">Home</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html"><span class="Nav_head">About Us</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="technology.html"><span class="Nav_head">Technology</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="service.html"><span class="Nav_head">Services</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html"><span class="Nav_head">Contact Us</span></a>
+                        </li>
+                    </ul>
+                    <form class="d-flex me-5">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+
+        <div class="Text1">
+            <div class="centered">
+                <h1 class="Text2">We Provide You <span style="color: yellowgreen;">Custom Softwares</span> and <span
+                        style="color: yellowgreen;">IT Services</span></h1>
+                <p class="Text3"><i class="fa-solid fa-quote-left"></i>  Design is intelligence made visible <i class="fa-solid fa-quote-right"></i> </p>
+                <a href="service.html">
+                    <button type="button" class="Know_more"><span class="Know"></span>KNOW MORE</button>
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- Popup Enquire start from here -->
+    <button class="trigger_popup" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        <h4> Enquiry</h4>
+    </button>
+    <!-- Modal -->
+    <div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content Image_Modal text-white">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="exampleModalLabel">Get In Touch</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="javascript:sendmail()" method="post" class="row g-3">
+                        <div class="col-md-12">
+                            <label for="validationDefault01" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="validationDefault01"
+                                placeholder="Enter Your Full Name" required>
+                        </div>
+                        <div class="col-md-12">
+                            <label for="validationDefaultUsername" class="form-label">E-mail</label>
+                            <div class="input-group">
+                                <span class="input-group-text" id="inputGroupPrepend2">@</span>
+                                <input type="email" class="form-control" id="validationDefaultUsername"
+                                    placeholder="Enter E-mail" aria-describedby="inputGroupPrepend2" required>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <label for="validationDefault02" class="form-label">Phone</label>
+                            <input type="number" class="form-control" id="validationDefault02" placeholder="Enter Phone"
+                                required>
+                        </div>
+
+                        <div class="col-md-12">
+                            <label for="validationDefault03" class="form-label">Message</label>
+                            <textarea class="form-control" id="validationDefault03" placeholder="Enter Comment"
+                                required></textarea>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
+                                <label class="form-check-label" for="invalidCheck2">
+                                    Agree to terms and conditions
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-12 text-center">
+                            <button class="btn btn-primary btn-lg" type="submit">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Flipster Carousel -->
+    <section id="features" class="blue" style="overflow-x: hidden;">
+        <div class="content">
+            <div class="slider slider-1">
+                <div class="container">
+                    <div class="service_heading mb-5">
+                        <h2 class="text-center Testim py-2">Our Best Services</h2>
+                    </div>
+                    <div class="row as">
+                        <div class="col-lg-9">
+                            <div class="strat">
+                                <div class="image">
+                                    <img src="/images/S1.png" height="350" width="100">
+                                </div>
+                                <div class="text">
+                                    <a href="service.html">WEB DESIGNING</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-9">
+                            <div class="strat">
+                                <div class="image">
+                                    <img src="/images/S2.png" height="350">
+                                </div>
+                                <div class="text">
+                                    <a href="service.html">WEBSITES AND PORTALS</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-9">
+                            <div class="strat">
+                                <div class="image">
+                                    <img src="/images/s3.png" height="350">
+                                </div>
+                                <div class="text">
+                                    <a href="service.html">SOFTWARE DEVELOPMENT</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-9">
+                            <div class="strat">
+                                <div class="image">
+                                    <img src="/images/s4.png" height="350">
+                                </div>
+                                <div class="text">
+                                    <a href="service.html">MOBILE APP DEVELOPMENT</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-9">
+                            <div class="strat">
+                                <div class="image">
+                                    <img src="/images/s5.png" height="350">
+                                </div>
+                                <div class="text">
+                                    <a href="service.html">CONSULTING AND OUTSOURCING</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-9">
+                            <div class="strat">
+                                <div class="image">
+                                    <img src="/images/s6.png" height="350">
+                                </div>
+                                <div class="text">
+                                    <a href="service.html">WEB HOSTING</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-9">
+                            <div class="strat">
+                                <div class="image">
+                                    <img src="/images/s7.png" height="350">
+                                </div>
+                                <div class="text">
+                                    <a href="service.html">DATA BACKUP & RECOVERY</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-9">
+                            <div class="strat">
+                                <div class="image">
+                                    <img src="/images/s8.png" height="350">
+                                </div>
+                                <div class="text">
+                                    <a href="service.html">DIGITAL AND SIGNATURE</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About section -->
+    <section class="about-section">
+        <div class="container">
+            <h1>WHO ARE WE ?</h1>
+            <div class="row">
+                <div class="content-column  col-md-6 col-sm-12 order-2">
+                    <div class="inner-column">
+                        <div class="sec-title">
+                            <span class="title">About Company</span>
+                            <h2>We are Providing Custom <br>Softwares and IT Services</h2>
+                        </div>
+                        <div class="text text-white"> <i class="fas fa-quote-left pe-2"></i>Softvelly Technology pvt ltd
+                            provide custom application with new
+                            latest technologies like react , artificial intelligence, data science, power BI , Robotics
+                            etc to our clients. In value addition to the existing business. And up to date according to
+                            the demand of time.</div>
+                        <ul class="list-style-one">
+                            <li class="text-capitalize">One stop solution for software, hardware and networking for all
+                                SMEs and small level business</li>
+                            <li class="text-capitalize">custom software for all fields like- hospitality, education,
+                                medical, logistic etc.</li>
+                            <li class="text-capitalize">we provide latest technologies solutions like- ASP .net core
+                                7.0, react JS, flutter, mongo DB, power BI, artificial intelligence etc.</li>
+                        </ul>
+                        <div class="btn-box">
+                            <a href="contact.html" class="theme-btn btn-style-one">Contact Us</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-column  col-md-6 col-sm-12">
+                    <div class="inner-column wow fadeInLeft">
+                        <figure class="image-1"><a href="about.html" class="lightbox-image" data-fancybox="images"><img
+                                    src="/images/m3.jpg" alt=""></a></figure>
+                        <figure class="image-2"><a href="about.html" class="lightbox-image" data-fancybox="images"><img
+                                    src="/images/m5.jpg" alt=""></a></figure>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service -->
+    <div id="cards_landscape_wrap-2">
+        <div class="container">
+            <h1 class="text-center Testim"> Our Services</h1>
+            <div class="row">
+                <div class="col-sm-6 col-md-3">
+                    <a href="service.html">
+                        <div class="card-flyer">
+                            <div class="text-box">
+                                <div class="image-box">
+                                    <img src="/images/S1.png" alt="not-found" />
+                                </div>
+                                <div class="text-container">
+                                    <button class="btn btn-success">Read More<i
+                                            class="fa-solid fa-arrow-right ms-2"></i></button>
+                                    <p>IT Division within organizations need some 30-40 skills to management operations
+                                        in smooth way. Most of the time...</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <a href="service.html">
+                        <div class="card-flyer">
+                            <div class="text-box">
+                                <div class="image-box">
+                                    <img src="/images/S2.png" alt="not-found" />
+                                </div>
+                                <div class="text-container">
+                                    <button class="btn btn-success">Read More<i
+                                            class="fa-solid fa-arrow-right ms-2"></i></button>
+                                    <p>All-round website development services from design to maintenance with web
+                                        experts websites With Team Work...
+
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <a href="service.html">
+                        <div class="card-flyer">
+                            <div class="text-box">
+                                <div class="image-box">
+                                    <img src="/images/s3.png" alt="not-found" />
+                                </div>
+
+                                <div class="text-container">
+                                    <button class="btn btn-success">Read More<i
+                                            class="fa-solid fa-arrow-right ms-2"></i></button>
+                                    <p>We offer full-cycle development services for web, mobile and desktop that have
+                                        already brought value to Walmart,Viber...</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <a href="service.html">
+                        <div class="card-flyer">
+                            <div class="text-box">
+                                <div class="image-box">
+                                    <img src="/images/s4.png" alt="not-found" />
+                                </div>
+                                <div class="text-container">
+                                    <button class="btn btn-success">Read More<i
+                                            class="fa-solid fa-arrow-right ms-2"></i></button>
+                                    <p>We specialize in development of Mobile Applications Native or Hybrid Technologies
+                                        as suitable to given...</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 col-md-3">
+                    <a href="service.html">
+                        <div class="card-flyer">
+                            <div class="text-box">
+                                <div class="image-box">
+                                    <img src="/images/s5.png" alt="not-found" />
+                                </div>
+                                <div class="text-container">
+                                    <button class="btn btn-success">Read More<i
+                                            class="fa-solid fa-arrow-right ms-2"></i></button>
+                                    <p>We empower clients with our expert IT consulting With more than nine years of
+                                        experience in meeting human...</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <a href="service.html">
+                        <div class="card-flyer">
+                            <div class="text-box">
+                                <div class="image-box">
+                                    <img src="/images/s6.png" alt="not-found" />
+                                </div>
+                                <div class="text-container">
+                                    <button class="btn btn-success">Read More<i
+                                            class="fa-solid fa-arrow-right ms-2"></i></button>
+                                    <p>We create corporate web portals and intranets to help established enterprises
+                                        benefit from collaboration and doc management...</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <a href="service.html">
+                        <div class="card-flyer">
+                            <div class="text-box">
+                                <div class="image-box">
+                                    <img src="/images/s7.png" alt="not-found" />
+                                </div>
+
+                                <div class="text-container">
+                                    <button class="btn btn-success">Read More<i
+                                            class="fa-solid fa-arrow-right ms-2"></i></button>
+                                    <p>Ensure the integrity of your data with Softvelly Technology Pvt. Ltd. enterprise-grade data
+                                        backup recovery services...</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <a href="service.html">
+                        <div class="card-flyer">
+                            <div class="text-box">
+                                <div class="image-box">
+                                    <img src="/images/s8.png" alt="not-found" />
+                                </div>
+                                <div class="text-container">
+                                    <button class="btn btn-success">Read More<i
+                                            class="fa-solid fa-arrow-right ms-2"></i></button>
+                                    <p>With supporting text below as a natural lead-in to additional content. With
+                                        supporting text below as a natural additional content...</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Contact section -->
+    <div class="container Contact_section mb-5">
+        <div class="contact-box">
+            <div class="left"></div>
+            <div class="right">
+                <h2 class="Contact">Contact Us</h2>
+                <input type="text" class="field" placeholder="Your Name">
+                <input type="text" class="field" placeholder="Your Email">
+                <input type="text" class="field" placeholder="Phone">
+                <textarea placeholder="Message" class="field"></textarea>
+                <button class="btn Send_btn btn-success">Send</button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Testimonial section -->
+    <div id="carouselMultiItemExample" class="carousel slide carousel-dark text-center py-5" data-bs-ride="carousel"
+        style=" box-shadow: 0px 0px 20px 0px rgba(44, 41, 41, 0.19);">
+        <h1 class="text-center mt-5 Testim">Testimonials</h1>
+        <h5 class="text-center mb-5 text-white text-capitalize">What our clients saying by me.</h5>
+        <div class="d-flex justify-content-center mb-4">
+            <button class="carousel-control-prev position-relative" type="button"
+                data-bs-target="#carouselMultiItemExample" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next position-relative" type="button"
+                data-bs-target="#carouselMultiItemExample" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+        <div class="carousel-inner py-4">
+            <div class="carousel-item active">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="rounded-circle shadow-1-strong mb-4" src="/images/m4.jpg" alt="avatar"
+                                width="160" height="140" />
+                            <h5 class="mb-3">Chadan Mishra</h5>
+                            <p>Motivational Speaker</p>
+                            <p class="text-white Testimonial_Test">
+                                <i class="fas fa-quote-left pe-2"></i>
+                                Softvelly Technology Pvt. Ltd. has helped us gain online visibility which has resulted in an
+                                increase in clients and business inquiries. Softvelly Technology Pvt. Ltd. is very knowledgeable in the digital
+                                marketing field. With this and Parvinder’s trusted business partners/ connections he
+                                really can provide the whole package. I have and will continue to gladly recommend Softvelly Technology Pvt. Ltd.
+                                to friends and business connections.
+                            </p>
+                            <ul class="list-unstyled d-flex justify-content-center text-warning mb-0">
+                                <li><i class="fas fa-star fa-sm"></i></li>
+                                <li><i class="fas fa-star fa-sm"></i></li>
+                                <li><i class="fas fa-star fa-sm"></i></li>
+                                <li><i class="fas fa-star fa-sm"></i></li>
+                                <li><i class="fas fa-star fa-sm"></i></li>
+                            </ul>
+                        </div>
+
+                        <div class="col-lg-4 d-none d-lg-block">
+                            <img class="rounded-circle shadow-1-strong mb-4" src="/images/m2.jpg" alt="avatar"
+                                width="160" height="140" />
+                            <h5 class="mb-3">Dr. Jitendra Singh Raghuvansi</h5>
+                            <p>Founder - Crasmib</p>
+                            <p class="text-white  Testimonial_Test">
+                                <i class="fas fa-quote-left pe-2"></i>
+                                Working with Softvelly Technology Pvt. Ltd. technologies was a pleasant experience. Things that stand out in
+                                particular about them are - Their services, their quick response to queries, they were
+                                always available to provide feedback as the project went along. Secondly, they
+                                demonstrated a clear understanding of the scope and nature of the project and delivered
+                                accordingly.
+                            </p>
+                            <ul class="list-unstyled d-flex justify-content-center text-warning mb-0">
+                                <li><i class="fas fa-star fa-sm"></i></li>
+                                <li><i class="fas fa-star fa-sm"></i></li>
+                                <li><i class="fas fa-star fa-sm"></i></li>
+                                <li><i class="fas fa-star fa-sm"></i></li>
+                                <li>
+                                    <i class="fas fa-star-half-alt fa-sm"></i>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="col-lg-4 d-none d-lg-block">
+                            <img class="rounded-circle shadow-1-strong mb-4" src="/images/s5.png" alt="avatar"
+                                width="160" height="140" />
+                            <h5 class="mb-3">Mr. Amresh</h5>
+                            <p>Founder - Biosol India</p>
+                            <p class="text-white  Testimonial_Test">
+                                <i class="fas fa-quote-left pe-2"></i>
+                                Softvelly Technology Pvt. Ltd. helped us contemporize and align with the new normal. The creative
+                                input for the new logo, page designs and UX built by them has made our website at par or
+                                probably better than global benchmarks. Working with Softvelly Technology Pvt. Ltd. technologies was a pleasant experience.
+                                I have and will continue to gladly recommend Softvelly Technology Pvt. Ltd.
+                                to friends and business connections. 
+                            </p>
+                            <ul class="list-unstyled d-flex justify-content-center text-warning mb-0">
+                                <li><i class="fas fa-star fa-sm"></i></li>
+                                <li><i class="fas fa-star fa-sm"></i></li>
+                                <li><i class="fas fa-star fa-sm"></i></li>
+                                <li><i class="fas fa-star fa-sm"></i></li>
+                                <li><i class="far fa-star fa-sm"></i></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="carousel-item">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img class="rounded-circle shadow-1-strong mb-4" src="/images/s3.png" alt="avatar"
+                                width="160" height="140" />
+                            <h5 class="mb-3">Ajeet Chaudhary</h5>
+                            <p>MD - IHMCS</p>
+                            <p class="text-white   Testimonial_Test">
+                                <i class="fas fa-quote-left pe-2"></i>
+                                Our partnership with Softvelly Technology Pvt. Ltd. helped us create and build a digital presence
+                                that represents our offering and that is aligned with our name “IHMCS”. Their design
+                                sense, UX expertise and digital marketing capabilities have built our online presence
+                                and helped source leads and business opportunities, which was the brief given to them.
+                                We have been particularly happy with their eye for detail, their aesthetic sense and
+                                customer focus.
+                            </p>
+                            <ul class="list-unstyled d-flex justify-content-center text-warning mb-0">
+                                <li><i class="fas fa-star fa-sm"></i></li>
+                                <li><i class="fas fa-star fa-sm"></i></li>
+                                <li><i class="fas fa-star fa-sm"></i></li>
+                                <li><i class="fas fa-star fa-sm"></i></li>
+                                <li><i class="fas fa-star fa-sm"></i></li>
+                            </ul>
+                        </div>
+
+                        <div class="col-lg-4 d-none d-lg-block">
+                            <img class="rounded-circle shadow-1-strong mb-4" src="/images/s6.png" alt="avatar"
+                                width="160" height="140" />
+                            <h5 class="mb-3">Alex Rey</h5>
+                            <p>Founder - AIO Pvt. Ltd.</p>
+                            <p class="text-white  Testimonial_Test">
+                                <i class="fas fa-quote-left pe-2"></i>
+                                Softvelly Technology Pvt. Ltd. has helped us gain online visibility which has resulted in an
+                                increase in clients and business inquiries. Softvelly Technology Pvt. Ltd. is very knowledgeable in the digital
+                                marketing field. With this and Parvinder’s trusted business partners/ connections he
+                                really can provide the whole package. I have and will continue to gladly recommend Softvelly Technology Pvt. Ltd.
+                                to friends and business connections.
+                            </p>
+                            <ul class="list-unstyled d-flex justify-content-center text-warning mb-0">
+                                <li><i class="fas fa-star fa-sm"></i></li>
+                                <li><i class="fas fa-star fa-sm"></i></li>
+                                <li><i class="fas fa-star fa-sm"></i></li>
+                                <li><i class="fas fa-star fa-sm"></i></li>
+                                <li>
+                                    <i class="fas fa-star-half-alt fa-sm"></i>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="col-lg-4 d-none d-lg-block">
+                            <img class="rounded-circle shadow-1-strong mb-4" src="/images/s7.png" alt="avatar"
+                                width="160" height="140" />
+                            <h5 class="mb-3">Maria Kate</h5>
+                            <p>UX - Designer</p>
+                            <p class="text-white   Testimonial_Test">
+                                <i class="fas fa-quote-left pe-2"></i>
+                                Softvelly Technology Pvt. Ltd. helped us contemporize and align with the new normal. The creative
+                                input for the new logo, page designs and UX built by them has made our website at par or
+                                probably better than global benchmarks.
+                            </p>
+                            <ul class="list-unstyled d-flex justify-content-center text-warning mb-0">
+                                <li><i class="fas fa-star fa-sm"></i></li>
+                                <li><i class="fas fa-star fa-sm"></i></li>
+                                <li><i class="fas fa-star fa-sm"></i></li>
+                                <li><i class="fas fa-star fa-sm"></i></li>
+                                <li><i class="far fa-star fa-sm"></i></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Footer -->
+    <footer class="text-center text-lg-start text-muted" style="background-color: #050505;">
+        <section class="text-center text-white">
+            <div class="container p-2 pb-0 ">
+                <section>
+                    <a class="btn text-white btn-floating m-1" style="background-color: #3b5998;"
+                        href="https://www.facebook.com/SoftVellyTechnology/" role="button" target="_blank"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <!-- Twitter -->
+                    <a class="btn text-white btn-floating m-1" style="background-color: #55acee;" href="#!"
+                        role="button"><i class="fab fa-twitter"></i></a>
+
+                    <!-- Google -->
+                    <a class="btn text-white btn-floating m-1" style="background-color: #dd4b39;" href="#!"
+                        role="button"><i class="fab fa-google"></i></a>
+
+                    <!-- Instagram -->
+                    <a class="btn text-white btn-floating m-1" style="background-color: #ac2bac;" href="#!"
+                        role="button"><i class="fab fa-instagram"></i></a>
+
+                    <!-- Linkedin -->
+                    <a class="btn text-white btn-floating m-1" style="background-color: #0082ca;" href="#!"
+                        role="button"><i class="fab fa-linkedin-in"></i></a>
+                </section>
+            </div>
+        </section>
+        <section class="">
+            <div class="container text-center text-md-start mt-5">
+                <div class="row mt-3">
+                    <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                        <h6 class="text-uppercase fw-bold mb-2">
+                            Softvelly Technology Pvt. Ltd.
+                        </h6>
+                        <p>
+                            "Softvelly Technology pvt ltd provide custom application with new latest technologies like
+                            react , artificial intelligence, data science, power BI , Robotics etc to our clients. In
+                            value addition to the existing business. And up to date according to the demand of time."
+                        </p>
+                    </div>
+                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            Menu
+                        </h6>
+                        <p>
+                            <a href="index.html" class="text-reset">Home</a>
+                        </p>
+                        <p>
+                            <a href="about.html" class="text-reset">About Us</a>
+                        </p>
+                        <p>
+                            <a href="technology.html" class="text-reset">Technology</a>
+                        </p>
+                        <p>
+                            <a href="service.html" class="text-reset">Services</a>
+                        </p>
+                        <p>
+                            <a href="contact.html" class="text-reset">Contact Us</a>
+                        </p>
+                    </div>
+                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            Services
+                        </h6>
+                        <p>
+                            <a href="service.html" class="text-reset">Web Designing</a>
+                        </p>
+                        <p>
+                            <a href="service.html" class="text-reset">Mobile App Designing</a>
+                        </p>
+                        <p>
+                            <a href="service.html" class="text-reset">Artificial Intelligence</a>
+                        </p>
+                        <p>
+                            <a href="service.html" class="text-reset">Data Center Consulting</a>
+                        </p>
+                        <p>
+                            <a href="service.html" class="text-reset">Web Hosting</a>
+                        </p>
+                    </div>
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                        <h6 class="text-uppercase fw-bold mb-4">Contact us</h6>
+                        <p><i class="fas fa-home me-3"></i>D-1, 4th Floor, Bareja Tower, Main Mathura Road, More, near
+                            Jaitpur,
+                            Badarpur, New Delhi, Delhi 110044</p>
+                        <p>
+                            <i class="fas fa-envelope me-3"></i>
+                            info@softvelly.com
+                        </p>
+                        <p><i class="fas fa-phone me-3"></i> +91-6381996475</p>
+                        <p><i class="fas fa-print me-3"></i> +91-6381996475</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+            © 2022 Copyright:
+            <a class="text-reset fw-bold" href="index.html">Softvelly Technology Pvt. Ltd.</a>
+            || Design and Developed by
+            <a class="text-reset fw-bold" href="https://codelovertechnology.com/" target="_blank">Softvelly Technology Pvt. Ltd.
+                Pvt. Ltd.</a>
+        </div>
+    </footer>
+    <!-- Footer -->
+
+
+
+    <script>
+        $(document).ready(function () {
+
+            $('.as').slick({
+                dots: true,
+                infinite: false,
+                autoplay: true,
+                autoplaySpeed: 2000,
+                pauseOnFocus: false,
+                pauseOnHover: false,
+                pauseOnDotsHover: false,
+                slidesToShow: 3,
+                slidesToScroll: 1,
+
+                responsive: [
+
+                    {
+                        breakpoint: 991,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1
+                        }
+                    },
+                    {
+                        breakpoint: 700,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1
+                        }
+                    },
+                    {
+                        breakpoint: 480,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1
+                        }
+                    }
+                ]
+
+            });
+            $('.asa').slick({
+                dots: true,
+                infinite: false,
+                autoplay: true,
+                autoplaySpeed: 3000,
+                pauseOnFocus: false,
+                pauseOnHover: false,
+                pauseOnDotsHover: false,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                fade: true,
+                cssEase: 'linear'
+            });
+
+        });
+
+
+    </script>
+
+    <!-- Enquiry Form -->
+    <script>
+        function sendmail() {
+            var name = $('#Name').val();
+            var email = $('#Sender').val();
+            var subject = $('#Subject').val();
+            var message = $('#Message').val();
+            var Body = 'Name: ' + name + '<br>Email: ' + email + '<br>Subject: ' + subject + '<br>Message: ' + message;
+            Email.send({
+                Host: "smtp.softvellytechnology.com",
+                Username: "Ajit.Chaudhary@softvellytechnology.com",
+                Password: "uc60s1G$9",
+                To: 'dkv7861999@gmail.com',
+                From: "Ajit.Chaudhary@softvellytechnology.com",
+                Subject: "This is the subject",
+                Body: Body
+            }).then(
+                message => {
+                    //console.log (message);
+                    if (message == 'OK') {
+                        alert('Your mail has been send. Thank you for connecting.');
+                    }
+                    else {
+                        console.error(message);
+                        alert('There is error at sending message. ')
+                    }
+                }
+            );
+        }
+    </script>
+    <script>
+        var Email = {
+            send: function (a) {
+                return new Promise(function (n, e) {
+                    a.nocache = Math.floor(1e6 * Math.random() + 1), a.Action = "Send"; var t = JSON.stringify(a);
+                    Email.ajaxPost("https://smtpjs.com/v3/smtpjs.aspx?", t, function (e) { n(e) })
+                })
+            },
+            ajaxPost: function (e, n, t) {
+                var a = Email.createCORSRequest("POST", e);
+                a.setRequestHeader("Content-type", "application/x-www-form-urlencoded"),
+                    a.onload = function () {
+                        var e = a.responseText;
+                        null != t && t(e)
+                    }, a.send(n)
+            },
+            ajax: function (e, n) {
+                var t = Email.createCORSRequest("GET", e);
+                t.onload = function () { var e = t.responseText; null != n && n(e) }, t.send()
+            },
+            createCORSRequest: function (e, n) {
+                var t = new XMLHttpRequest;
+                return "withCredentials" in t ? t.open(e, n, !0) : "undefined" != typeof XDomainRequest ? (t = new XDomainRequest).open(e, n) : t = null, t
+            }
+        };
+    </script>
+    <!-- Enquiry Form -->
+</body>
+
+</html>
